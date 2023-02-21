@@ -1,0 +1,112 @@
+.wrap {
+  position: relative;
+  padding: 15px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+
+  a {
+    transition: all 0.3s ease 0s;
+    font-size: 13px;
+
+
+    @media (any-hover: hover){
+        &:hover{
+            color: var(--red-color);
+        }
+    } 
+  }
+
+  a:last-child {
+    button {
+      border: none;
+      background: none;
+      outline: none;
+    }
+  }
+
+  @media(max-width: 1024px) {
+    display: none;
+  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  gap: 25px;
+
+  a {
+    transition: all 0.3s ease 0s;
+    font-size: 18px;
+
+
+    @media (any-hover: hover){
+        &:hover{
+            color: var(--red-color);
+        }
+    }
+  }
+
+  @media(max-width: 1024px) {
+    display: none;
+  }
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+
+  button:first-child {
+    @media(max-width: 1024px) {
+      display: none;
+    }
+  }
+}
+
+.burger {
+  width: 30px;
+  height: 30px;
+
+  @media(min-width: 1024px) {
+    display: none;
+  }
+}
+
+.adaptive {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 15px;
+  padding-top: 15px;
+  position: absolute;
+  transform: translateX(100%);
+  transition: all .3s ease;
+  gap: 15px;
+
+  svg {
+    background: none;
+    border: none;
+  }
+
+  &.active {
+    transform: translateX(0%);
+  }
+}

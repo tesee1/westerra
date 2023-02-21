@@ -1,0 +1,47 @@
+.popup {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        div {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    div {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all .3s ease;
+        position: relative;
+        padding: 80px 40px 60px 40px;
+        display: flex;
+        flex-direction: column;
+        max-width: 370px;
+        background-color: #fff;
+        gap: 20px;
+        border-radius: 15px;
+
+        svg {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 30px;
+            height: 30px;
+            fill: #606969;
+            cursor: pointer;
+        }
+    }
+}

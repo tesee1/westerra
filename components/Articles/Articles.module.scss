@@ -1,0 +1,54 @@
+.wrap {
+    padding: 50px 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;    
+
+    div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        width: 100%;
+        @media(max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media(max-width: 676px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            h3 {
+                position: relative;
+                margin-bottom: 30px;
+                font-size: 21px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 130%;
+                    width: 60px;
+                    height: 5px;
+                    background-color: #eb0505;
+                }
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            a {
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+    }
+}

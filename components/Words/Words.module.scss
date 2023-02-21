@@ -1,0 +1,33 @@
+.wrap {
+    padding: 50px 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+
+    @media(max-width: 767px){
+        grid-template-columns: 1fr;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        h2 {
+            font-size: 50px;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 21px;
+        }
+
+        a {
+            align-self: flex-start;
+        }
+    }
+}
