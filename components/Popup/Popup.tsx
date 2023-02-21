@@ -1,13 +1,14 @@
 import classNames from 'classnames'
-import React, { MouseEventHandler, useEffect, useRef, useState } from 'react'
+import React, { LegacyRef, MouseEventHandler, useEffect, useRef, useState } from 'react'
 import Button from '../Button/Button'
+import { PopupProps } from './Popup.interface'
 import styles from './Popup.module.scss'
 
-const Popup = ({ isVisible, setIsVisible }) => {
-    const ref = useRef()
+const Popup: React.FC<PopupProps> = ({ isVisible, setIsVisible }) => {
+    const ref = useRef(null)
 
     useEffect(() => {
-        function clickFn(e) {
+        function clickFn(e: any) {
             if (ref.current && ref.current === e.target) {
                 setIsVisible(false);
             }

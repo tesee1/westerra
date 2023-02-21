@@ -7,7 +7,7 @@ import Make3 from '@/public/make3.avif'
 import classNames from 'classnames'
 
 
-const Make = () => {
+const Make: React.FC = (): JSX.Element => {
     return (
         <section>
             <div className={classNames(styles.container)}>
@@ -43,7 +43,7 @@ const Make = () => {
                 <div className={styles.bottom}>
                     <div className={classNames("container", styles.bottomContainer)}>
                         <Card img={Make1} title='What even is a credit union?' number='01' subtitle='Though we are a lot like a bank, there are several ways we differ. One, there are no stockholders. That means everyone who has an account with us is a member and an owner. And two, all your deposits and funds stay local and contribute to the Colorado economy.' btnText="There's more" />
-                        <Card img={Make2} title='Make money on  your money with a CD' number='02' subtitle='Think of a certificate of deposit like savings on steroids. And you&apos;ll earn even more with our promotional rates.' btnText="Learn More" />
+                        <Card img={Make2} title='Make money on your money with a CD' number='02' subtitle='Think of a certificate of deposit like savings on steroids. And you&apos;ll earn even more with our promotional rates.' btnText="Learn More" />
                         <Card img={Make3} title='No-fee spending account' number='03' subtitle='No monthly fees. No minimum balance required. Just a debit card that helps you earn rewards (like cash back).' btnText="Learn More" />
                     </div>
                 </div>

